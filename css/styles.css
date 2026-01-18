@@ -104,7 +104,7 @@ nav {
     font-size: 1.5rem;
     color: var(--color-gray-dark);
     margin-bottom: 2.5rem;
-    max-width: 800px;
+    max-width: 900px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -126,26 +126,41 @@ nav {
     transform: translateY(-3px);
 }
 
-/* Services Section */
-.services {
-    padding: 6rem 0;
+/* Value Proposition Section */
+.value-prop {
+    padding: 4rem 0;
     background-color: var(--color-white);
 }
 
-.services h2 {
+.value-statement {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: var(--color-gray-dark);
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Offerings Section */
+.offerings {
+    padding: 6rem 0;
+    background-color: var(--color-gray-light);
+}
+
+.offerings h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 4rem;
     color: var(--color-black);
 }
 
-.services-grid {
+.offerings-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2.5rem;
 }
 
-.service-card {
+.offering-card {
     background-color: var(--color-white);
     padding: 2.5rem;
     border-radius: 10px;
@@ -153,23 +168,83 @@ nav {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.service-card:hover {
+.offering-card.featured {
+    border: 3px solid var(--color-gold);
+}
+
+.offering-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 30px rgba(160, 131, 78, 0.15);
 }
 
-.service-icon {
+.offering-icon {
     font-size: 3rem;
     margin-bottom: 1.5rem;
 }
 
-.service-card h3 {
+.offering-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-black);
+}
+
+.offering-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-gold);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.offering-card p {
+    color: var(--color-gray-dark);
+    line-height: 1.7;
+}
+
+/* Problems Solved Section */
+.problems-solved {
+    padding: 6rem 0;
+    background-color: var(--color-white);
+}
+
+.problems-solved h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+    color: var(--color-black);
+}
+
+.problems-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+.problem-card {
+    background-color: var(--color-white);
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid var(--color-gold);
+}
+
+.problem-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(160, 131, 78, 0.15);
+}
+
+.problem-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.problem-card h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     color: var(--color-black);
 }
 
-.service-card p {
+.problem-card p {
     color: var(--color-gray-dark);
     line-height: 1.7;
 }
@@ -181,6 +256,7 @@ nav {
 }
 
 .about h2 {
+    text-align: center;
     font-size: 2.5rem;
     margin-bottom: 2rem;
     color: var(--color-black);
@@ -188,37 +264,128 @@ nav {
 
 .about-content {
     max-width: 900px;
+    margin: 0 auto;
 }
 
-.about-text p {
+.about-intro {
     font-size: 1.2rem;
     color: var(--color-gray-dark);
-    margin-bottom: 1.5rem;
     line-height: 1.8;
+    text-align: center;
 }
 
-.about-features {
-    margin-top: 2.5rem;
+/* Results Section */
+.results {
+    padding: 6rem 0;
+    background-color: var(--color-white);
+}
+
+.results h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+    color: var(--color-black);
+}
+
+.stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
 }
 
-.feature {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+.stat-card {
+    background-color: var(--color-white);
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.checkmark {
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(160, 131, 78, 0.15);
+}
+
+.stat-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
     color: var(--color-gold);
-    font-size: 1.5rem;
-    font-weight: bold;
+    margin-bottom: 0.5rem;
 }
 
-.feature span:last-child {
-    font-size: 1.1rem;
+.stat-card p {
     color: var(--color-gray-dark);
+    line-height: 1.7;
+    margin-bottom: 0.5rem;
+}
+
+.stat-card p:first-of-type {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-black);
+    margin-bottom: 1rem;
+}
+
+.stat-detail {
+    font-size: 1rem;
+    color: var(--color-gray-dark);
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 6rem 0;
+    background-color: var(--color-gray-light);
+}
+
+.testimonials h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+    color: var(--color-black);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+}
+
+.testimonial-card {
+    background-color: var(--color-white);
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(160, 131, 78, 0.15);
+}
+
+.testimonial-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-quote {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--color-gray-dark);
+    font-style: italic;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-author {
+    font-weight: 600;
+    color: var(--color-gold);
+    font-size: 1rem;
 }
 
 /* Contact Section */
@@ -296,6 +463,7 @@ footer {
 
 footer p {
     color: var(--color-gray-medium);
+    font-size: 0.9rem;
 }
 
 /* Responsive Design */
@@ -310,15 +478,26 @@ footer p {
 
     .nav-links {
         gap: 1rem;
+        font-size: 0.9rem;
     }
 
-    .services h2,
+    .value-statement {
+        font-size: 1.1rem;
+    }
+
+    .offerings h2,
+    .problems-solved h2,
     .about h2,
+    .results h2,
+    .testimonials h2,
     .contact h2 {
         font-size: 2rem;
     }
 
-    .services-grid {
+    .offerings-grid,
+    .problems-grid,
+    .stats-grid,
+    .testimonials-grid {
         grid-template-columns: 1fr;
     }
 
@@ -349,5 +528,20 @@ footer p {
 
     .logo-img {
         height: 40px;
+    }
+
+    .cta-button {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .value-prop,
+    .offerings,
+    .problems-solved,
+    .about,
+    .results,
+    .testimonials,
+    .contact {
+        padding: 4rem 0;
     }
 }
