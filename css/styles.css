@@ -158,6 +158,55 @@ nav {
     text-align: center;
 }
 
+/* Personal Bio Section */
+.personal-bio {
+    padding: 6rem 0;
+    background-color: var(--color-black);
+    border-bottom: 1px solid var(--color-dark-border);
+}
+
+.bio-content {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.bio-image {
+    flex: 0 0 auto;
+    width: 300px;
+}
+
+.bio-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(160, 131, 78, 0.2);
+    border: 2px solid var(--color-dark-border);
+}
+
+.bio-text {
+    flex: 1;
+}
+
+.bio-text h2 {
+    font-size: 2.5rem;
+    color: var(--color-white);
+    margin-bottom: 1.5rem;
+}
+
+.bio-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--color-gray-dark);
+    margin-bottom: 1.5rem;
+}
+
+.bio-text p:last-child {
+    margin-bottom: 0;
+}
+
 /* Offerings Section */
 .offerings {
     padding: 6rem 0;
@@ -286,20 +335,62 @@ nav {
 .about h2 {
     text-align: center;
     font-size: 2.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     color: var(--color-white);
 }
 
-.about-content {
-    max-width: 900px;
+.about-content-with-image {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
-.about-intro {
-    font-size: 1.2rem;
+.about-text-column {
+    flex: 1;
+}
+
+.about-features {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.feature-item {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+}
+
+.feature-content h3 {
+    font-size: 1.4rem;
+    color: var(--color-white);
+    margin-bottom: 0.5rem;
+}
+
+.feature-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
     color: var(--color-gray-dark);
-    line-height: 1.8;
-    text-align: center;
+}
+
+.about-image-column {
+    flex: 0 0 auto;
+    width: 450px;
+}
+
+.about-image-column img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(160, 131, 78, 0.2);
+    border: 2px solid var(--color-dark-border);
 }
 
 /* Results Section */
@@ -539,6 +630,37 @@ footer p {
     .contact-methods {
         flex-direction: column;
         align-items: center;
+    }
+
+    .bio-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .bio-image {
+        width: 250px;
+    }
+
+    .bio-text h2 {
+        font-size: 2rem;
+    }
+
+    .about-content-with-image {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .about-image-column {
+        width: 100%;
+        order: -1;
+    }
+
+    .about-text-column {
+        width: 100%;
+    }
+
+    .feature-content h3 {
+        font-size: 1.2rem;
     }
 }
 
