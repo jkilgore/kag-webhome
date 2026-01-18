@@ -9,9 +9,13 @@
     --color-white: #FFFFFF;
     --color-gold: #A0834E;
     --color-black: #080808;
+    --color-dark-bg: #0D0D0D;
+    --color-dark-card: #1A1A1A;
+    --color-dark-border: #2A2A2A;
     --color-gray-light: #F5F5F5;
-    --color-gray-medium: #E0E0E0;
-    --color-gray-dark: #333333;
+    --color-gray-medium: #999999;
+    --color-gray-dark: #CCCCCC;
+    --color-gold-light: #B89968;
 }
 
 html {
@@ -21,8 +25,8 @@ html {
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     line-height: 1.6;
-    color: var(--color-black);
-    background-color: var(--color-white);
+    color: var(--color-gray-dark);
+    background-color: var(--color-black);
 }
 
 .container {
@@ -36,9 +40,11 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: var(--color-white);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    background-color: rgba(8, 8, 8, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(160, 131, 78, 0.1);
     z-index: 1000;
+    border-bottom: 1px solid var(--color-dark-border);
 }
 
 nav {
@@ -51,6 +57,7 @@ nav {
 .logo-img {
     height: 50px;
     width: auto;
+    filter: brightness(1.1);
 }
 
 .nav-links {
@@ -61,7 +68,7 @@ nav {
 
 .nav-links a {
     text-decoration: none;
-    color: var(--color-black);
+    color: var(--color-gray-dark);
     font-weight: 500;
     transition: color 0.3s ease;
 }
@@ -72,30 +79,32 @@ nav {
 
 .cta-button {
     background-color: var(--color-gold);
-    color: var(--color-white);
+    color: var(--color-black);
     padding: 0.75rem 1.5rem;
     border-radius: 5px;
+    font-weight: 600;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .cta-button:hover {
-    background-color: #8a6f42;
+    background-color: var(--color-gold-light);
     transform: translateY(-2px);
-    color: var(--color-white);
+    color: var(--color-black);
 }
 
 /* Hero Section */
 .hero {
     margin-top: 80px;
     padding: 8rem 0 6rem;
-    background: linear-gradient(135deg, var(--color-white) 0%, var(--color-gray-light) 100%);
+    background: linear-gradient(135deg, var(--color-black) 0%, var(--color-dark-bg) 100%);
     text-align: center;
+    border-bottom: 1px solid var(--color-dark-border);
 }
 
 .hero h1 {
     font-size: 3.5rem;
     font-weight: 700;
-    color: var(--color-black);
+    color: var(--color-white);
     margin-bottom: 1.5rem;
     line-height: 1.2;
 }
@@ -112,24 +121,26 @@ nav {
 .cta-button-large {
     display: inline-block;
     background-color: var(--color-gold);
-    color: var(--color-white);
+    color: var(--color-black);
     padding: 1.25rem 3rem;
     font-size: 1.2rem;
     font-weight: 600;
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .cta-button-large:hover {
-    background-color: #8a6f42;
+    background-color: var(--color-gold-light);
     transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(160, 131, 78, 0.3);
 }
 
 /* Value Proposition Section */
 .value-prop {
     padding: 4rem 0;
-    background-color: var(--color-white);
+    background-color: var(--color-dark-bg);
+    border-bottom: 1px solid var(--color-dark-border);
 }
 
 .value-statement {
@@ -144,14 +155,14 @@ nav {
 /* Offerings Section */
 .offerings {
     padding: 6rem 0;
-    background-color: var(--color-gray-light);
+    background-color: var(--color-black);
 }
 
 .offerings h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 4rem;
-    color: var(--color-black);
+    color: var(--color-white);
 }
 
 .offerings-grid {
@@ -161,20 +172,22 @@ nav {
 }
 
 .offering-card {
-    background-color: var(--color-white);
+    background-color: var(--color-dark-card);
     padding: 2.5rem;
     border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--color-dark-border);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .offering-card.featured {
-    border: 3px solid var(--color-gold);
+    border: 2px solid var(--color-gold);
+    box-shadow: 0 0 20px rgba(160, 131, 78, 0.2);
 }
 
 .offering-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(160, 131, 78, 0.15);
+    box-shadow: 0 8px 30px rgba(160, 131, 78, 0.2);
+    border-color: var(--color-gold);
 }
 
 .offering-icon {
@@ -185,7 +198,7 @@ nav {
 .offering-card h3 {
     font-size: 1.8rem;
     margin-bottom: 0.5rem;
-    color: var(--color-black);
+    color: var(--color-white);
 }
 
 .offering-subtitle {
@@ -203,14 +216,15 @@ nav {
 /* Problems Solved Section */
 .problems-solved {
     padding: 6rem 0;
-    background-color: var(--color-white);
+    background-color: var(--color-dark-bg);
+    border-top: 1px solid var(--color-dark-border);
 }
 
 .problems-solved h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 4rem;
-    color: var(--color-black);
+    color: var(--color-white);
 }
 
 .problems-grid {
@@ -220,17 +234,18 @@ nav {
 }
 
 .problem-card {
-    background-color: var(--color-white);
+    background-color: var(--color-dark-card);
     padding: 2.5rem;
     border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--color-dark-border);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-left-color 0.3s ease;
     border-left: 4px solid var(--color-gold);
 }
 
 .problem-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(160, 131, 78, 0.15);
+    box-shadow: 0 8px 30px rgba(160, 131, 78, 0.2);
+    border-left-color: var(--color-gold-light);
 }
 
 .problem-icon {
@@ -241,7 +256,7 @@ nav {
 .problem-card h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: var(--color-black);
+    color: var(--color-white);
 }
 
 .problem-card p {
@@ -252,14 +267,15 @@ nav {
 /* About Section */
 .about {
     padding: 6rem 0;
-    background-color: var(--color-gray-light);
+    background-color: var(--color-black);
+    border-top: 1px solid var(--color-dark-border);
 }
 
 .about h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 2rem;
-    color: var(--color-black);
+    color: var(--color-white);
 }
 
 .about-content {
@@ -277,14 +293,15 @@ nav {
 /* Results Section */
 .results {
     padding: 6rem 0;
-    background-color: var(--color-white);
+    background-color: var(--color-dark-bg);
+    border-top: 1px solid var(--color-dark-border);
 }
 
 .results h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 4rem;
-    color: var(--color-black);
+    color: var(--color-white);
 }
 
 .stats-grid {
@@ -294,17 +311,18 @@ nav {
 }
 
 .stat-card {
-    background-color: var(--color-white);
+    background-color: var(--color-dark-card);
     padding: 2.5rem;
     border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--color-dark-border);
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .stat-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(160, 131, 78, 0.15);
+    box-shadow: 0 8px 30px rgba(160, 131, 78, 0.2);
+    border-color: var(--color-gold);
 }
 
 .stat-icon {
@@ -328,26 +346,27 @@ nav {
 .stat-card p:first-of-type {
     font-size: 1.2rem;
     font-weight: 600;
-    color: var(--color-black);
+    color: var(--color-white);
     margin-bottom: 1rem;
 }
 
 .stat-detail {
     font-size: 1rem;
-    color: var(--color-gray-dark);
+    color: var(--color-gray-medium);
 }
 
 /* Testimonials Section */
 .testimonials {
     padding: 6rem 0;
-    background-color: var(--color-gray-light);
+    background-color: var(--color-black);
+    border-top: 1px solid var(--color-dark-border);
 }
 
 .testimonials h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 4rem;
-    color: var(--color-black);
+    color: var(--color-white);
 }
 
 .testimonials-grid {
@@ -357,16 +376,17 @@ nav {
 }
 
 .testimonial-card {
-    background-color: var(--color-white);
+    background-color: var(--color-dark-card);
     padding: 2.5rem;
     border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--color-dark-border);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .testimonial-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(160, 131, 78, 0.15);
+    box-shadow: 0 8px 30px rgba(160, 131, 78, 0.2);
+    border-color: var(--color-gold);
 }
 
 .testimonial-icon {
@@ -391,14 +411,15 @@ nav {
 /* Contact Section */
 .contact {
     padding: 6rem 0;
-    background-color: var(--color-white);
+    background-color: var(--color-dark-bg);
     text-align: center;
+    border-top: 1px solid var(--color-dark-border);
 }
 
 .contact h2 {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
-    color: var(--color-black);
+    color: var(--color-white);
 }
 
 .contact-subtitle {
@@ -420,13 +441,13 @@ nav {
 }
 
 .contact-card {
-    background-color: var(--color-white);
+    background-color: var(--color-dark-card);
     padding: 2.5rem 3rem;
     border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--color-dark-border);
     text-decoration: none;
-    color: var(--color-black);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: var(--color-white);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     flex: 1;
     min-width: 250px;
     max-width: 350px;
@@ -434,7 +455,8 @@ nav {
 
 .contact-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(160, 131, 78, 0.15);
+    box-shadow: 0 8px 30px rgba(160, 131, 78, 0.2);
+    border-color: var(--color-gold);
 }
 
 .contact-icon {
@@ -445,7 +467,7 @@ nav {
 .contact-card h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
-    color: var(--color-black);
+    color: var(--color-white);
 }
 
 .contact-card p {
@@ -459,6 +481,7 @@ footer {
     color: var(--color-white);
     text-align: center;
     padding: 2rem 0;
+    border-top: 1px solid var(--color-dark-border);
 }
 
 footer p {
