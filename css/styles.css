@@ -8,13 +8,13 @@
 :root {
     --color-white: #FFFFFF;
     --color-gold: #A0834E;
-    --color-black: #080808;
-    --color-dark-bg: #0D0D0D;
-    --color-dark-card: #1A1A1A;
-    --color-dark-border: #2A2A2A;
+    --color-black: #1A1A1A;
+    --color-dark-bg: #242424;
+    --color-dark-card: #2D2D2D;
+    --color-dark-border: #404040;
     --color-gray-light: #F5F5F5;
-    --color-gray-medium: #999999;
-    --color-gray-dark: #CCCCCC;
+    --color-gray-medium: #AAAAAA;
+    --color-gray-dark: #E0E0E0;
     --color-gold-light: #B89968;
 }
 
@@ -40,7 +40,7 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(8, 8, 8, 0.95);
+    background-color: rgba(26, 26, 26, 0.95);
     backdrop-filter: blur(10px);
     box-shadow: 0 2px 20px rgba(160, 131, 78, 0.1);
     z-index: 1000;
